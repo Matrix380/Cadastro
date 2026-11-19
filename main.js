@@ -1,36 +1,35 @@
-
-const alunos = [
+const comidas = [
     {
-        nome:"teste",
-        curso:"ADS"
+        nome:"pizza",
+        categoria:"salgado"
     },
     {
-        nome:"teste dois",
-        curso:"ENG"
+        nome:"X-bacon",
+        categoria:"Fast food"
     },
     {
-        nome:"teste três",
-        curso:"ENG"
+        nome:"Bolo",
+        categoria:"Doce"
     }
 ]
 
-const formulario = document.getElementById("formAluno")
+const formulario = document.getElementById("formComida")
 const campoNome = document.getElementById("nome")
-const campoCurso = document.getElementById("curso")
+const campocategoria = document.getElementById("categoria")
 const corpoTabela = document.getElementById("corpoTabela")
 
 function exibir(){
     corpoTabela.innerHTML = "";
 
-    for (let posicao = 0; posicao < alunos.length; posicao++){
+    for (let posicao = 0; posicao < comidas.length; posicao++){
 
-        const aluno = alunos[posicao]
+        const comida = comidas[posicao]
 
         corpoTabela.innerHTML += `
             <tr>
                 <td>${posicao}</td>
-                <td>${aluno.nome}</td>
-                <td>${aluno.curso}</td>
+                <td>${comida.nome}</td>
+                <td>${comida.categoria}</td>
             </tr>
        
         `
@@ -43,12 +42,12 @@ exibir();
 formulario.addEventListener("submit", function(evento){
     evento.preventDefault();
 
-    const aluno = {
+    const comida = {
         nome: campoNome.value,
-        curso: campoCurso.value
+        categoria: campocategoria.value
     }
 
-    alunos.push(aluno)
+    comidas.push(comida)
 
     exibir()
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>cadastro de alunos</h1>
+
+    <form id="formAluno">
+        <input type="text" id="nome">
+        <input type="text" id="curso">
+        <button id="btnSalvar" type="submit">Cadastrar</button>
+    </form>
+
+    <br><br><!--Pula linha-->
+
+    <table>
+        <thead>
+            <th>Posição</th>
+            <th>Nome</th>
+            <th>Curso</th>
+        </thead>
+
+        <tbody id="corpoTabela"></tbody>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
